@@ -4,13 +4,25 @@
 
 body{
   font-family: 'Lato', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1vw;
+}
+
+header, section, footer{
+  padding-left: 13.43vmax;
+  padding-right: 13.43vmax;
+}
+
+header, footer{
+  background-size: cover;
 }
 
 header{
   background: #02496a url("../img/HERO.jpg") no-repeat;
-  background-size: cover;
-  padding: 50px 215px;
+  min-height: 100vh;
+  }
+
+footer{
+  background: #151d20 url('../img/bg-footer.jpg')
 }
 
 ul{
@@ -33,6 +45,11 @@ a{
   text-decoration: none;
 }
 
+button{
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
 [class*="title--line"]{
   background-color: #222;
   margin: 0 auto;
@@ -42,7 +59,7 @@ a{
 
   .header{
     display: flex;
-
+    padding-top: 5.5vmax;
   }
 
   .header__nav{
@@ -50,7 +67,7 @@ a{
     margin: 0 auto;
     padding-left: 25%;
     text-transform: uppercase;
-    width: 1100px;
+    width: 68.75vmax;
     justify-content: space-between;
     font-weight: 500;
     font-size: 0.87em;
@@ -65,6 +82,8 @@ a{
     font-family: 'Raleway';
     font-size: 3em;
     color: #fff;
+    margin-top: 24%;
+    margin-bottom: 7%;
   }
 
     .header__title--line{
@@ -77,17 +96,35 @@ a{
     font-weight: 400;
     line-height: 1.875em;
     text-align: center;
+    margin-bottom: 27vmin;
+    padding-left: 14.68vmax;
+    padding-right: 14.68vmax;
   }
 
   .header__scroll{
+    width: 5.75vmax;
     margin: 0 auto;
-    width: 92px;
-    height: 92px;
   }
+
+    .header__scroll--container{
+      width: 100%;
+      height: 0;
+      padding-top: 50%;
+      position: relative;
+      margin: 0 auto;
+    }
+
+      .header__scroll--image{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        fill: #707e85;
+        opacity: 0.5;
+      }
 
 .services{
   padding: 116px 225px;
-  color: #222;
+  /*color: #222;*/
 }
 
   .services__title{
@@ -100,6 +137,11 @@ a{
     margin: 0 auto;
     width: 100%;
   }
+
+    .services__icon{
+      background-color: #fff;
+      fill: #005494;
+    }
 
     .services__icon:first-child{
       width: 75px;
@@ -132,18 +174,20 @@ a{
       }
 
 .about{
- margin: 0 auto;
- display: flex;
- color: #fff;
- background: #fff url("../img/bg-dolore.jpg") no-repeat;
+  margin: 0 auto;
+  padding: 0 19.69vmax 0 13.4vmax;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background: #fff url("../img/bg-dolore.jpg") no-repeat;
+  background-size: cover;
 }
 
   .about__container{
     display: flex;
     flex-direction: column;
-    width: 555px;
-    height: 220px;
-  }
+    }
 
     .about__title{
       transform: scaleY(1.0092);
@@ -159,33 +203,49 @@ a{
       text-decoration: underline;
     }
 
+  .about__image{
+    padding-top: 4.68vmax;
+    padding-left: 15.31vmax;
+  }
+
 .work{
   text-align: center;
-  width: 1170px;
 }
 
   .work__items{
-    display: flex;
-    justify-content: space-between;
-    flex-basis: 100%;
-    padding: 0;
-    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    margin-top: 5.94vmax;
   }
+
+  .work__items a{
+    display: inline-block;
+    width: 30%;
+    margin-right: 2vmax;
+  }
+
+  .work__items a:last-child{
+    margin-right: 0;
+  }
+
+    .work__item{
+      width: 100%;
+    }
 
   .work__button{
     border-width: 3px;
     border-color:  #222222;
     border-style: solid;
-    width: 364px;
-    height: 54px;
+    width: 22.75vmax;
+    height: 6vmin;
+    margin: 5vmax 0;
     background-color: #fff;
-    font-size: 1.5em;
-    text-transform: uppercase;
   }
 
 .contact{
-  /*width: 41.88%;*/
   margin: 0 auto;
+  padding-top: 7.5vmax;
+  padding-bottom: 7.5vmax;
   background: #02496a url("../img/bg-footer.jpg") no-repeat;
 }
 
@@ -205,15 +265,61 @@ a{
     justify-content: space-between;
     align-items: baseline;
     margin: 0 auto;
+    padding: 4.375vmax 0;
   }
 
-  .contact__form{
-    width: 41.88%;
-    height: 180px;
-    background-color: transparent;
+    .contact__socialmedia--icon{
+      fill: #fff;
+      fill-rule: evenodd;
+    }
+
+  .contactform{
+    width: 41.875vmax;
+    background: rgba(0, 0, 0, 0.1);
     margin: 0 auto;
+    padding-bottom: 3vmax;
   }
+
+    .contactform--container{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+      .contactform__name, .contactform__email{
+        width: 18.75vmax;
+        border: none;
+        border-bottom: 2px solid;
+        border-bottom-color: rgba(175, 175, 175, 1);
+        background-color: transparent;
+        font-size: 1.125em;
+        font-style: italic;
+        color: #676767;
+        margin-bottom: 2vmax;
+        padding: 1.25vmax 2vmax;
+      }
+
+    .contactform__message{
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid;
+      border-bottom-color: rgba(175, 175, 175, 1);
+      background-color: transparent;
+      font-size: 1.125em;
+      font-style: italic;
+      color: #676767;
+      padding: 1.25vmax 2vmax;
+    }
+
+    .contactform__message::placeholder{
+      padding-top: 12vh;
+    }
 
   .contact__button{
-    text-align: center;
+    margin: 0 40%;
+    width: 20vh;
+    height: 3.75vw;
+    border: 3px solid #fff;
+    background-color: transparent;
+    color: #fff;
  }
