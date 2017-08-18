@@ -12,10 +12,6 @@ header, section, footer{
   padding-right: 13.43vmax;
 }
 
-header, footer{
-  background-size: cover;
-}
-
 header{
   background: #02496a url("../img/HERO.jpg") no-repeat;
   min-height: 100vh;
@@ -57,7 +53,11 @@ button{
   height: 2px;
 }
 
-  .header{
+.header, #about, #contact{
+  background-size: cover;
+}
+
+  .header__logomenu{
     display: flex;
     padding-top: 5.5vmax;
   }
@@ -104,6 +104,7 @@ button{
   .header__scroll{
     width: 5.75vmax;
     margin: 0 auto;
+    padding-bottom: 3vmax;
   }
 
     .header__scroll--container{
@@ -118,42 +119,19 @@ button{
         position: absolute;
         bottom: 0;
         left: 0;
-        fill: #707e85;
+        fill: #808b91;
         opacity: 0.5;
       }
 
-.services{
-  padding: 116px 225px;
-  /*color: #222;*/
-}
-
-  .services__title{
+.services__title{
     text-align: center;
   }
-
-  .services__icons{
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-    .services__icon{
-      background-color: #fff;
-      fill: #005494;
-    }
-
-    .services__icon:first-child{
-      width: 75px;
-      height: 132px;
-    }
 
   .services__list{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     text-align: center;
-    padding: 0;
+    padding: 5vmax 0;
   }
 
     .services__item{
@@ -163,14 +141,22 @@ button{
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
+      padding-right: 4.375em;
     }
 
-      .services__item:first-child{
-        padding-right: 4.375em;
+      .services__image--left{
+        width: 4.69vw;
+        height: 8.25vw;
       }
 
-      .services__item:last-child{
-        padding-left: 4.69em;
+      .services__image--middle{
+        width: 12vw;
+        height: 9.25vw;
+      }
+
+      .services__image--right{
+        width: 46.875%;
+        height: 46.875%;
       }
 
 .about{
@@ -181,12 +167,13 @@ button{
   align-items: center;
   color: #fff;
   background: #fff url("../img/bg-dolore.jpg") no-repeat;
-  background-size: cover;
+  /*background-size: cover;*/
 }
 
   .about__container{
     display: flex;
     flex-direction: column;
+    height: 44%;
     }
 
     .about__title{
@@ -226,6 +213,14 @@ button{
 
   .work__items a:last-child{
     margin-right: 0;
+  }
+
+  .work__items a:hover{
+    background-color: #fff;
+    background: url('../img/Rectangle-hover.jpeg');
+    opacity: 0.5;
+    width: 30%;
+    height: 100%;
   }
 
     .work__item{
@@ -313,6 +308,12 @@ button{
 
     .contactform__message::placeholder{
       padding-top: 12vh;
+    }
+
+    .contactform__name:focus,
+    .contactform__email:focus,
+    .contactform__message:focus{
+      border: 2px solid red;
     }
 
   .contact__button{
